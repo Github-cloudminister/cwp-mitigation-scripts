@@ -263,7 +263,7 @@ done < "$BK/logs/profile_files.txt"
 
 section "Stop Known Malware Processes"
 ps -eo pid=,args= | \
-grep -E '/home/.*/\.config/htop/defunct|/usr/bin/defunct|\[kswapd0\]|\[card0-crtc8\]' | \
+grep -E '/home/.*/\.config/htop/defunct|/usr/bin/defunct|\[card0-crtc8\]' | \
 grep -v grep \
 > "$BK/logs/malware_processes.txt" || true
 while read -r pid args; do
